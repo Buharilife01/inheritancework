@@ -1,0 +1,8 @@
+.scroll-main {
+  overflow-y: scroll;
+  overflow: hidden;
+}
+body
+{
+    background-color: wheat;
+}
