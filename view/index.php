@@ -1,12 +1,11 @@
 <?php
 
-include("math_controller.php");
-
+include("../controller/MathController.php");
+//check if the request methos is post method
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $x = $_POST["num1"];
-    $y = $_POST["num2"];
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
     $operator = $_POST["operator"];
-   
 }
 ?>
 
@@ -18,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../asetholder/css/boostrap/bootstrap.css">
+    <link rel="stylesheet" href="../asetholder/css/font-awasome/css/all.css">
     <link rel="stylesheet" href="../asetholder/css/maths.css">
     <title>Solve</title>
 </head>
@@ -30,49 +30,49 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     <div class="container-fluid">
         <div class="row">
-            <div class=" col-lg-12 col-sm-12 col-md-6 d-flex">
+            <div class=" col-lg-12 col-sm-12 col-md-6 ">
                 <div class="col-lg-3 ">
 
                 </div>
-                <div class="col-lg-9 shadow mt-5">
+                <div class="col-lg-9 shadow mt-5 mx-auto">
                     <div class="row">
-                        <small class="fs-2 fw-bold  text-center mb-3">Calculate from Maths to statistic mean</small>
+                        <h6 class=" fw-bold  text-center mb-5 "><i class="me-2 fa fa-calculator "></i> Calculate from Maths to statistic Mean</h6>
                         <div class="col-lg-4 mb-3">
 
-                            <div class="card border-warning mb-3 bg-dark">
+                            <div class="card border-warning mb-3 bg-dark mx-2">
                                 <div class="card-header text-light  text-center fw-bold fs-3">Answer</div>
                                 <div class="card-body text-light">
                                     <?php
-                                  
 
-                                    if (!empty($x) && !empty($y)) {
+
+                                    if (!empty($num1) && !empty($num2)) {
                                         switch ($operator) {
                                             case '+':
-                                                $add = new maths();
-                                                echo " $x + $y <br> Your answer is " . $add->add($x, $y);
+                                                $add = new MathController();
+                                                echo " $num1 + $num2 <br> Your answer is " . $add->Addition($num1, $num2);
 
 
                                                 break;
 
 
                                             case '-':
-                                                $subtract = new maths();
-                                                echo "  $x - $y  <br> Your answer is " . $subtract->subtract($x, $y);
+                                                $subtract = new MathController();
+                                                echo "  $num1 - $num2  <br> Your answer is " . $subtract->Substraction($num1, $num2);
                                                 break;
 
 
                                             case '/':
-                                                $divide = new maths();
-                                                echo "  $x / $y <br> Your answer is " . $divide->divide($x, $y);
+                                                $divide = new MathController();
+                                                echo "  $num1 / $num2 <br> Your answer is " . $divide->division($num1, $num2);
                                                 break;
 
                                             case '*':
-                                                $multi = new maths();
-                                                echo  "  $x x $y <br> Your answer is " . $multi->multipy($x, $y);
+                                                $multi = new MathController();
+                                                echo  "  $num1 x  $num2 <br> Your answer is " . $multi->Multiplication($num1, $num2);
                                                 break;
                                             case 'mean':
-                                                $mean = new statistic();
-                                                echo  "  $x mean $y <br> Your answer is " . $mean->mean($x, $y);
+                                                $mean = new StatisticController();
+                                                echo  "  $num1 mean $num2 <br> Your answer is " . $mean->Mean($x, $y);
                                                 break;
                                             // case 'mode':
                                             //     $mode = new statistic();
@@ -83,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                                                 break;
                                         }
-                                       
                                     }
 
                                     ?>
@@ -93,23 +92,24 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         <div class="col-lg-5">
                             <div class="card border-primary  bg-dark mb-3"">
                                 <div class=" card-header text-light fw-bold text-center fs-">Solve</div>
-                            <div class="card-body text-primary">
+                            <div class="card-body text-light fw-bold">
 
                                 <form action="" method="post">
 
-                                    <label for=""></label>
-                                    <input type="number" name="num1" class="form-control border-2 border-warning mb-3">
+                                    <label for="number" class="mb-2"> First Number</label>
+                                    <input type="number" name="num1" class="form-control border-2 border-warning mb-2">
+                                    <label  class="mb-2">Operators</label>
                                     <select name="operator" class="form-control border-warning border-2" id=""> Operator
                                         <option value="+"> +</option>
                                         <option value="-"> -</option>
                                         <option value="/"> /</option>
                                         <option value="*"> *</option>
                                         <option value="mean"> Mean</option>
-                                        
+
 
                                     </select>
-                                    <label for=""></label>
-                                    <input type="number" name="num2" class="form-control border-2 border-warning mb-3">
+                                    <label for="" class="mb-2"> Sec Number</label>
+                                    <input type="number" name="num2" class="form-control border-2 border-warning mb-2">
                                     <button type="submit" name="submit" class="btn btn-warning">
                                         Submit
                                     </button>
