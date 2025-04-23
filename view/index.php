@@ -36,9 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <div class="col-lg-9 shadow mt-5">
                     <div class="row">
+                        <small class="fs-2 fw-bold  text-center mb-3">Calculate from Maths to statistic mean</small>
                         <div class="col-lg-4 mb-3">
 
-                            <div class="card border-warning mb-3 bg-dark ">
+                            <div class="card border-warning mb-3 bg-dark">
                                 <div class="card-header text-light  text-center fw-bold fs-3">Answer</div>
                                 <div class="card-body text-light">
                                     <?php
