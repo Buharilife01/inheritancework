@@ -21,7 +21,14 @@
       $multiply = $num1 * $num2;
       return $multiply;
     }
-  }
+   
 
+    }
+  
+
+  //  $num1=readline("Enter number \n");
+  //  $result=new MathController();
+  //  echo $result->SquareRoot($num1);
+  
    
   ?>

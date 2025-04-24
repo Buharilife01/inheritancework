@@ -43,8 +43,8 @@
                     </div>
                     <div class="col-lg-9 bg-dark mt-5">
                         <div class="angle bg-danger mt-5">
-                            <strong class="A"> A </strong>
-                            <div class="B">
+                            <strong class="A text-light"> A </strong>
+                            <div class="B text-light">
                                 <strong> B </strong>
                                 <strong class="C"> C </strong>
                             </div>
