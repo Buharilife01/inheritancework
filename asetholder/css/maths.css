@@ -2,30 +2,62 @@
   overflow-y: scroll;
   overflow: hidden;
 }
-body
-{
-    background-color:weat;
+body {
+  background-color: weat;
 }
- /* pythagoria */
- .angle {
-            
+/* pythagoria */
+
+.angle {
+
             clip-path: polygon(0% 100%, 100% 100%, 0 0);
             width: 150px;
-            height: 200px;
+            height: 180px;
+            position: absolute;
+            background: radial-gradient(wheat, green);
+            margin-top: 80px;
+            left: 110px;
+        }
+
+        .smallc {
+            width: 20%;
+            position: absolute;
+            background-color: wheat;
+            top: 130px;
+            left: 240px;
+        }
+
+
+
+        .smalla {
+            width: 20%;
+            position: absolute;
+            top: 130px;
+            left: 20px;
+            background-color: wheat;
+        }
+
+        .smallb {
+            width: 20%;
+            position: absolute;
+            background-color: wheat;
+            top: 260px;
+            left: 140px;
 
         }
 
-        .A {
+        /* calculator holder solve */
+        .holder {
+            height: 60vh;
+            width: 25rem;
+
+        }
+
+        /* calculator holder solve */
+
+        .solve {
+            position: absolute;
+            top: 330px;
+            left: 25%;
             
-           
-        }
 
-        .B {
-            margin-top: 153px;
         }
-
-        .C {
-            margin-top: 53px;
-            margin-left: 120px;
-        }
-      
