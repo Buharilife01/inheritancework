@@ -1,24 +1,24 @@
  <?php
   class MathController
   {
-    public function Addition($num1, $num2)
+    public function Addition($num_one, $num_two)
     {
-      $add = $num1 + $num2;
+      $add = $num_one + $num_two;
       return $add;
     }
-    public function Substraction($num1, $num2)
+    public function Substraction($num_one, $num_two)
     {
-      $substract = $num1 - $num2;
+      $substract = $num_one - $num_two;
       return $substract;
     }
-    public function Division($num1, $num2)
+    public function Division($num_one, $num_two)
     {
-      $divide = $num1 / $num2;
+      $divide = $num_one / $num_two;
       return $divide;
     }
-    public function Multiplication($num1, $num2)
+    public function Multiplication($num_one, $num_two)
     {
-      $multiply = $num1 * $num2;
+      $multiply = $num_one * $num_two;
       return $multiply;
     }
    

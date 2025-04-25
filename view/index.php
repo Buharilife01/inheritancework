@@ -1,10 +1,11 @@
 <?php
 
+
 include("../controller/MathController.php");
 //check if the request methos is post method
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $num1 = $_POST["num1"];
-    $num2 = $_POST["num2"];
+    $num_one = $_POST["num_one"];
+    $num_two = $_POST["num_two"];
     $operator = $_POST["operator"];
 }
 ?>
@@ -29,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <body>
 
     <div class="container-fluid">
-        
+
         <div class="row">
             <div class=" col-lg-12 col-sm-12 col-md-6 ">
                 <div class="col-lg-3 ">
@@ -46,11 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                     <?php
 
 
-                                    if (!empty($num1) && !empty($num2)) {
+                                    if (!empty($num_one) && !empty($num_two)) {
                                         switch ($operator) {
                                             case '+':
                                                 $add = new MathController();
-                                                echo " $num1 + $num2 <br> Your answer is " . $add->Addition($num1, $num2);
+                                                echo " $num_one + $num_two <br> Your answer is "
+                                                    . $add->Addition($num_one, $num_two);
 
 
                                                 break;
@@ -58,23 +60,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                                             case '-':
                                                 $subtract = new MathController();
-                                                echo "  $num1 - $num2  <br> Your answer is " . $subtract->Substraction($num1, $num2);
+                                                echo "  $num_one- $num_two  <br> Your answer is "
+                                                    . $subtract->Substraction($num_one, $num_two);
                                                 break;
 
 
                                             case '/':
                                                 $divide = new MathController();
-                                                echo "  $num1 / $num2 <br> Your answer is " . $divide->division($num1, $num2);
+                                                echo "  $num_one/ $num_two <br> Your answer is "
+                                                    . $divide->division($num_one, $num_two);
                                                 break;
 
                                             case '*':
                                                 $multi = new MathController();
-                                                echo  "  $num1 x  $num2 <br> Your answer is " . $multi->Multiplication($num1, $num2);
+                                                echo  "  $num_one  $num_two <br> Your answer is "
+                                                    . $multi->Multiplication($num_one, $num_two);
                                                 break;
-                                            case 'mean':
-                                                $mean = new StatisticController();
-                                                echo  "  $num1 mean $num2 <br> Your answer is " . $mean->Mean($x, $y);
-                                                break;
+                                            // case 'mean':
+                                            //     $mean = new StatisticController();
+                                            //     echo  "  $num_onemean $num2 <br> Your answer is " . $mean->Mean($x, $y);
+                                            //     break;
                                             // case 'mode':
                                             //     $mode = new statistic();
                                             //     echo  "  $x mode $y <br> Your answer is " . $mode->mode($x, $y);
@@ -98,19 +103,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <form action="" method="post">
 
                                     <label for="number" class="mb-2"> First Number</label>
-                                    <input type="number" name="num1" class="form-control border-2 border-warning mb-2">
-                                    <label  class="mb-2">Operators</label>
+                                    <input type="number" name="num_one" class="form-control border-2 border-warning mb-2">
+                                    <label class="mb-2">Operators</label>
                                     <select name="operator" class="form-control border-warning border-2" id=""> Operator
                                         <option value="+"> +</option>
                                         <option value="-"> -</option>
                                         <option value="/"> /</option>
                                         <option value="*"> *</option>
                                         <option value="mean"> Mean</option>
-
-
                                     </select>
                                     <label for="" class="mb-2"> Sec Number</label>
-                                    <input type="number" name="num2" class="form-control border-2 border-warning mb-2">
+                                    <input type="number" name="num_two" class="form-control border-2 border-warning mb-2">
                                     <button type="submit" name="submit" class="btn btn-warning">
                                         Submit
                                     </button>

@@ -2,30 +2,30 @@
 include "MathController.php";
 class PythagoController extends MathController{
     // findin hypothenus
-    public function  Pathagoria($num1,$num2){
+    public function  PathagoriaPlus($num_one,$num_two){
 
-        $sqareOne=$num1 **2;
-        $squareTwo=$num2 **2;
+        $square_one=$num_one **2;
+        $square_two=$num_two **2;
         $sum=new MathController;
-        $Pythagoria= $sum->Addition($sqareOne,$squareTwo);
-        return $Pythagoria;
+        $pythagoria= $sum->Addition($square_one,$square_two);
+        return $pythagoria;
 
     }
     // finding shorter leg
-    public function  PathagoriaMinus($num1, $num2)
+    public function  PathagoriaMinus($num_one, $num_two)
     {
-        $sqareOne = $num1 ** 2;
-        $squareTwo = $num2 ** 2;
+        $square_one= $num_one ** 2;
+        $square_two = $num_two** 2;
         $sum = new MathController;
-        $Pythagoria = $sum->Substraction($sqareOne, $squareTwo);
-        return $Pythagoria;
+        $pythagoria = $sum->Substraction($square_one, $square_two);
+        return $pythagoria;
     }
        
 }
 
-$num1=readline("Enter number \n:");
-$num2 =readline("Enter Sec number :\n");
+$num_one=readline("Enter number \n:");
+$num_two =readline("Enter Sec number :\n");
 $pytha=new  PythagoController();
-echo $pytha->PathagoriaMinus($num1,$num2);
+echo $pytha->PathagoriaPlus($num_one,$num_two);
 
 ?>
