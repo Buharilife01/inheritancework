@@ -46,18 +46,9 @@ body {
         }
 
         /* calculator holder solve */
-        .holder {
-            height: 60vh;
-            width: 25rem;
-
-        }
+        
+        
 
         /* calculator holder solve */
 
-        .solve {
-            position: absolute;
-            top: 330px;
-            left: 25%;
-            
-
-        }
+  

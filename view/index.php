@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                             case '+':
                                                 $add = new MathController();
                                                 echo " $num_one + $num_two <br> Your answer is "
-                                                    . $add->Addition($num_one, $num_two);
+                                                    . $add->addition($num_one, $num_two);
 
 
                                                 break;
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                             case '-':
                                                 $subtract = new MathController();
                                                 echo "  $num_one- $num_two  <br> Your answer is "
-                                                    . $subtract->Substraction($num_one, $num_two);
+                                                    . $subtract->substraction($num_one, $num_two);
                                                 break;
 
 
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                             case '*':
                                                 $multi = new MathController();
                                                 echo  "  $num_one  $num_two <br> Your answer is "
-                                                    . $multi->Multiplication($num_one, $num_two);
+                                                    . $multi->multiplication($num_one, $num_two);
                                                 break;
                                             // case 'mean':
                                             //     $mean = new StatisticController();
