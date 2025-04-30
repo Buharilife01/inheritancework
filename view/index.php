@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <div class="col-lg-9 shadow mt-5 mx-auto">
                     <div class="row">
-                        <h6 class=" fw-bold  text-center mb-5 "><i class="me-2 fa fa-calculator "></i> Calculate from Maths to statistic Mean</h6>
+                        <h6 class=" fw-bold  text-center mb-5 "><i class="me-2 fa fa-calculator "></i> Calculate from
+                            Maths to statistic Mean</h6>
                         <div class="col-lg-4 mb-3">
 
                             <div class="card border-warning mb-3 bg-dark mx-2">
@@ -67,15 +68,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                                             case '/':
                                                 $divide = new MathController();
-                                                echo "  $num_one/ $num_two <br> Your answer is "
+                                                echo "  $num_one / $num_two <br> Your answer is "
                                                     . $divide->division($num_one, $num_two);
                                                 break;
 
-                                            case '*':
-                                                $multi = new MathController();
-                                                echo  "  $num_one  $num_two <br> Your answer is "
-                                                    . $multi->multiplication($num_one, $num_two);
-                                                break;
+                                           
                                             // case 'mean':
                                             //     $mean = new StatisticController();
                                             //     echo  "  $num_onemean $num2 <br> Your answer is " . $mean->Mean($x, $y);
@@ -103,17 +100,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <form action="" method="post">
 
                                     <label for="number" class="mb-2"> First Number</label>
-                                    <input type="number" name="num_one" class="form-control border-2 border-warning mb-2">
+                                    <input type="number" name="num_one"
+                                        class="form-control border-2 border-warning mb-2">
                                     <label class="mb-2">Operators</label>
                                     <select name="operator" class="form-control border-warning border-2" id=""> Operator
-                                        <option value="+"> +</option>
+                                        <option value="+"> add</option>
                                         <option value="-"> -</option>
                                         <option value="/"> /</option>
                                         <option value="*"> *</option>
                                         <option value="mean"> Mean</option>
                                     </select>
                                     <label for="" class="mb-2"> Sec Number</label>
-                                    <input type="number" name="num_two" class="form-control border-2 border-warning mb-2">
+                                    <input type="number" name="num_two"
+                                        class="form-control border-2 border-warning mb-2">
                                     <button type="submit" name="submit" class="btn btn-warning">
                                         Submit
                                     </button>
