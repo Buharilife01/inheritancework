@@ -7,48 +7,17 @@ body {
 }
 /* pythagoria */
 
-.angle {
-
-            clip-path: polygon(0% 100%, 100% 100%, 0 0);
-            width: 150px;
-            height: 180px;
-            position: absolute;
-            background: radial-gradient(wheat, green);
-            margin-top: 80px;
-            left: 110px;
-        }
-
-        .smallc {
-            width: 20%;
-            position: absolute;
-            background-color: wheat;
-            top: 130px;
-            left: 240px;
-        }
+     .angle {
+         clip-path: polygon(0% 100%, 100% 100%, 0 0);
+         width: 150px;
+         height: 180px;
+         position: absolute;
+         background: radial-gradient(wheat, green);
+         margin-top: 80px;
+         left: 110px;
+     }
 
 
+/* calculator holder solve */
 
-        .smalla {
-            width: 20%;
-            position: absolute;
-            top: 130px;
-            left: 20px;
-            background-color: wheat;
-        }
-
-        .smallb {
-            width: 20%;
-            position: absolute;
-            background-color: wheat;
-            top: 260px;
-            left: 140px;
-
-        }
-
-        /* calculator holder solve */
-        
-        
-
-        /* calculator holder solve */
-
-  
+/* calculator holder solve */
